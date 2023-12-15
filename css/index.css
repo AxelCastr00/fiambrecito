@@ -21,7 +21,6 @@ header img {
   height: auto;
 }
 
-
 .social-button {
   display: flex;
   align-items: center;
@@ -35,6 +34,11 @@ header img {
   font-size: 20px;
 }
 
+.social-button img {
+  width: 2rem;
+  height: auto;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -43,60 +47,37 @@ ul {
   align-items: center;
 }
 
-ul a { 
+ul a {
   text-decoration: none;
 }
 
-/*MEDIA QUERY*/
-
+/* MEDIA QUERIES */
 
 @media (max-width: 1200px) {
-  header {
-    margin: 0 auto; 
-  }
   header img {
     max-width: 23rem;
-    height: auto;
   }
 }
 
 @media (max-width: 1024px) {
-  header {
-    margin: 0 auto; 
-  }
   header img {
     max-width: 36rem;
-    height: auto;
   }
 }
 
 @media (max-width: 600px) {
-  header {
-    margin: 0 auto; 
-  }
   header img {
     max-width: 23rem;
-    height: auto;
-    padding: 0; 
+    padding: 0;
   }
 
   .social-button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 30px;
     height: 30px;
-    border-radius: 50%;
-    margin: 0 10px;
-    background-color: black;
-    color: #ffa235;
     font-size: 15px;
   }
-  
+  .social-button img {
+    width: 1.5rem;
+    height: auto;
+  }
 }
-
-
-
-
-
-
