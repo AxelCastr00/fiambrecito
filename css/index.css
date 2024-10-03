@@ -54,301 +54,183 @@ nav ul li a {
 }
 
 .search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;  /* Centra verticalmente los elementos dentro del contenedor */
 }
 
 .search input {
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  outline: none;
-  transition: border-color 0.3s;
-  width: 250px;
+    padding: 10px 15px;           /* Mayor padding para un campo más amplio */
+    border: 1px solid #ccc;       /* Borde delgado y suave */
+    border-radius: 20px;          /* Bordes redondeados */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    outline: none;                 /* Elimina el borde de enfoque predeterminado */
+    transition: border-color 0.3s; /* Transición suave en el color del borde */
+    width: 250px;                  /* Ancho del input */
 }
 
 .search input:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007BFF; /* Color de borde al enfocar */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra más intensa al enfocar */
 }
 
 .search button {
-  background-color: #000000;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+    background-color: #000000; /* Color de fondo para el botón */
+    color: white;               /* Color del texto */
+    border: none;               /* Sin borde */
+    border-radius: 20px;       /* Bordes redondeados */
+    padding: 10px 15px;        /* Padding del botón */
+    cursor: pointer;            /* Cursor tipo puntero al pasar el mouse */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
 }
 
 .search button:hover {
-  background-color: #838383;
+    background-color: #838383; /* Color de fondo más oscuro al pasar el mouse */
 }
 
 /* Iconos */
 .icons a {
   color: #fff;
-  text-decoration: none;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
-.right-section {
-  width: 100%;
+/* Menú hamburguesa */
+.hamburger {
+  display: none; /* Oculto por defecto */
+  cursor: pointer;
 }
 
+/* Contenido principal */
+main {
+  padding: 20px;
+}
+
+/* Sección de imagen */
+.image-logo {
+  text-align: center;
+}
+
+.flyer-image {
+  width: 100%; /* Ancho completo en dispositivos móviles */
+  max-width: 400px; /* Máximo ancho en dispositivos más grandes */
+}
+
+/* Sección de beneficios */
 .benefits {
-  background-color: #666;
-  color: #fff;
-  display: inline-flex;
-  padding: 20px 40px;
-  align-items: center;
-  gap: 43px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
 }
 
 .benefit-item {
+  flex: 1;
   display: flex;
   align-items: center;
-  flex: 1;
+  padding: 10px;
 }
 
 .benefit-item i {
-  font-size: 25px;
-  color: white;
-  margin-right: 20px;
+  font-size: 2rem;
+  margin-right: 10px;
 }
 
-.benefit-item div {
-  text-align: left;
-}
-
-.benefit-item p {
-  margin: 5px 0;
-  line-height: 1.5;
-}
-
+/* Tarjetas de productos */
 .productos {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
   gap: 20px;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  justify-content: space-between; /* Espacio entre los elementos */
 }
 
+/* Estilo de las tarjetas */
 .card {
-  position: relative;
-  width: 100%;
-  max-width: 300px;
-  height: 300px;
-  background-color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.3s;
+  flex: 1 1 calc(25% - 20px); /* Ancho ajustable de la tarjeta */
+  background: white;
+  border-radius: 10px; /* Bordes redondeados */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  padding: 10px;
+  display: flex;
+  flex-direction: column; /* Organiza contenido en columna */
+  align-items: center; /* Centra el contenido */
 }
 
 .card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  top: 0;
-  left: 0;
-  z-index: -1;
+  width: 100%; /* Ajusta al ancho completo de la tarjeta */
+  border-radius: 10px 10px 0 0; /* Bordes redondeados solo arriba */
 }
 
-.card h3 {
-  color: #FFF;
-  font-family: 'Poppins', sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 20px;
-}
-
-.card button {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 20px;
-  border: 2px solid #FFF;
-  background-color: #1E1E1E;
-  color: #FFF;
-  cursor: pointer;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-}
-
-.card button:hover {
-  background-color: #333;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-/* Newsletter */
+/* Sección de newsletter */
 .newsletter {
-  background-color: #777;
-  color: #fff;
-  text-align: center;
+  background-color: #f8f8f8;
   padding: 20px;
+  text-align: center;
 }
 
-.newsletter-signup {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.newsletter-signup input {
-  padding: 10px;
-  border: none;
-}
-
-.newsletter-signup button {
-  padding: 10px;
-  background-color: #000;
-  color: #fff;
-  border: none;
-}
-
-/* Footer */
+/* Estilo del footer */
 footer {
   background-color: #333;
   color: #fff;
-  padding: 20px;
-  display: flex;
-  justify-content: space-around;
+  padding: 20px 0;
 }
 
 .footer-content {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  width: 100%;
+  justify-content: space-between;
+  padding: 0 20px; /* Espaciado horizontal */
+  flex-wrap: wrap; /* Permite que los elementos se muevan a la siguiente línea si no hay suficiente espacio */
 }
 
-.footer-logo h1 {
-  font-size: 24px;
+.footer-logo img {
+  width: 100px; /* Ajustar el tamaño del logo del footer */
 }
 
-.footer-links h3,
-.footer-contact h3,
-.footer-social h3 {
-  margin-bottom: 10px;
+.footer-links, .footer-contact, .footer-social {
+  margin: 10px; /* Margen para separación */
 }
 
 .footer-links ul {
-  list-style: none;
+  list-style: none; /* Sin viñetas */
+  padding: 0; /* Sin padding */
 }
 
-.footer-links ul li a,
-.footer-social a {
-  color: #fff;
-  text-decoration: none;
+.footer-links li a {
+  color: #fff; /* Color blanco */
+  text-decoration: none; /* Sin subrayado */
 }
 
-.footer-contact p {
-  margin-bottom: 5px;
-}
-
-/* Flyer */
-.image-logo {
-  display: flex;
-  flex-direction: row;
-  background-color: #1e1e1e;
-  overflow: hidden;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center;     /* Centra verticalmente */
-  height: 70vh;          /* Ajusta la altura según sea necesario */
-}
-
-.image-logo img {
-  width: 35rem;          /* Ancho de la imagen */
-  height: 35rem;         /* Alto de la imagen */
-}
-
-.flyer-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #1e1e1e;
-  overflow: hidden;
-  width: 100%;
-  height: 400px;
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
-  position: relative;
-}
-
-/* Sección de texto */
-.text-section {
-  flex: 1;
-  padding: 40px;
-  color: white;
-  text-align: center;
-}
-
-.main-title {
-  font-size: 80px;
-  color: #ff9180;
-  letter-spacing: 5px;
-  transition: all 0.5s ease-in-out;
-}
-
-.sub-title {
-  font-size: 60px;
-  color: white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  transition: all 0.5s ease-in-out;
-}
-
-/* Media Queries para responsividad */
+/* Estilos para dispositivos móviles */
 @media (max-width: 768px) {
-  nav {
-    flex-direction: column; /* Cambiar a columna en dispositivos pequeños */
-    align-items: flex-start; /* Alinear elementos a la izquierda */
+  .nav-links {
+    display: none; /* Ocultar enlaces de navegación por defecto */
+    flex-direction: column; /* En columna */
+    width: 100%; /* Ancho completo */
+    position: absolute; /* Posición absoluta para superponer */
+    background-color: #333; /* Color de fondo */
+    top: 60px; /* Alineación */
+    left: 0; /* Alineación */
+  }
+
+  .nav-links.active {
+    display: flex; /* Mostrar cuando está activo */
+  }
+
+  .hamburger {
+    display: block; /* Mostrar menú hamburguesa */
+    color: #fff; /* Color de los iconos */
+    font-size: 24px; /* Tamaño del icono */
   }
 
   .search {
-    width: 100%;
-    margin-top: 10px; /* Espacio entre el nav y la barra de búsqueda */
+    flex-direction: column; /* Colocar input y botón uno debajo del otro */
   }
 
-  .benefits {
-    flex-direction: column; /* Cambiar a columna para los beneficios */
+  .search input {
+    width: 100%; /* Ancho completo para el input */
+    margin-bottom: 10px; /* Margen inferior para separación */
   }
 
+  /* Tarjetas de productos en dispositivos móviles */
   .card {
-    max-width: 100%; /* Asegurarse de que las tarjetas ocupen todo el ancho */
-    height: auto; /* Altura automática para mejor responsividad */
-  }
-
-  .main-title {
-    font-size: 50px; /* Reducir tamaño en dispositivos pequeños */
-  }
-
-  .sub-title {
-    font-size: 30px; /* Reducir tamaño en dispositivos pequeños */
+    flex: 1 1 calc(50% - 20px); /* Dos tarjetas por fila */
   }
 }
-
-@media (max-width: 480px) {
-  .main-title {
-    font-size: 30px; /* Ajustar aún más el tamaño */
-  }
-
-  .sub-title {
-    font-size: 20px; /* Ajustar aún más el tamaño */
-  }
-
-  .benefits {
-    padding: 10px; /* Reducir padding en beneficios */
-  }
-}
-
