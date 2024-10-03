@@ -12,6 +12,7 @@ body {
   background-color: #f2f2f2;
 }
 
+/* General styles for the header */
 header {
   background-color: #333;
   color: white;
@@ -57,7 +58,7 @@ nav {
 .nav-links {
   display: flex;
   gap: 20px;
-   z-index: 1000;
+  z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
 }
 
 .nav-links li {
@@ -67,53 +68,6 @@ nav {
 .nav-links li a {
   color: white;
   text-decoration: none;
-}
-
-/* Barra superior */
-.top-bar {
-  background-color: #444;
-  text-align: center;
-  padding: 10px 0;
-}
-
-.top-bar a {
-  color: #fff;
-  text-decoration: underline;
-}
-
-/* Estilo para el input de búsqueda en el menú */
-.search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-
-.search input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  outline: none;
-  width: 200px;
-}
-
-.search input:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.search button {
-  background-color: #000;
-  color: white;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.search button:hover {
-  background-color: #838383;
 }
 
 /* Responsive styles */
@@ -140,24 +94,64 @@ nav {
   .icons {
     position: absolute;
     top: 10px;
-    right: 20px;
-  }
-
-  /* Ajustar estilos de búsqueda en modo responsive */
-  .search {
-    margin-top: 10px; /* Espacio entre el menú y el campo de búsqueda */
-    width: 100%; /* Hacer el campo de búsqueda de ancho completo */
-  }
-
-  .search input {
-    width: 100%; /* Asegura que el campo de búsqueda use el 100% del ancho disponible */
+    right: 60px; /* Ajusta la posición para que no se superponga con el menú */
   }
 }
 
 /* Estilos para las barras del menú hamburguesa convertida en "X" */
-.hamburger-icon.active i {
-  content: "\f00d"; /* Font Awesome icono de cruz */
+.menu-toggle.open .fa-bars {
+  display: none; /* Oculta el ícono de hamburguesa cuando está abierto */
 }
+
+.menu-toggle.open .fa-times {
+  display: block; /* Muestra el ícono de "X" cuando está abierto */
+}
+
+.menu-toggle .fa-times {
+  display: none; /* Oculta el ícono de "X" de manera predeterminada */
+}
+
+/* Barra superior */
+.top-bar {
+  background-color: #444;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.search {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 200px;
+}
+
+.search input:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.search button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
 
 /* Sección de beneficios */
 .benefits {
