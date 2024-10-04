@@ -12,140 +12,143 @@ body {
   background-color: #f2f2f2;
 }
 
-/* General styles for the header */
 header {
-  background-color: #333;
-  color: white;
+    background-color: #333;
+    color: white;
 }
 header img {
-  width: 10rem;
+    width: 10rem;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
 }
 
 .menu-toggle {
-  display: none; /* Escondemos el botón de hamburguesa en pantallas grandes */
+    display: none; /* Escondemos el botón de hamburguesa en pantallas grandes */
 }
 
 .icons {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .icons a {
-  color: white;
-  font-size: 20px;
+    color: white;
+    font-size: 20px;
 }
 
 /* Estilo para las barras del menú hamburguesa */
 #hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 #hamburger i {
-  color: white;
-  font-size: 24px;
+    color: white;
+    font-size: 24px;
 }
 
 .nav-links {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    gap: 20px;
 }
 
 .nav-links li {
-  list-style: none;
+    list-style: none;
 }
 
 .nav-links li a {
-  color: white;
-  text-decoration: none;
+    color: white;
+    text-decoration: none;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
-  .menu-toggle {
-      display: block;
-  }
+    .menu-toggle {
+        display: block;
+    }
 
-  .nav-links {
-      display: none; /* Ocultar el menú por defecto en móviles */
-      flex-direction: column;
-      position: absolute;
-      top: 60px;
-      right: 0;
-      background-color: #333;
-      width: 100%;
-      padding: 20px;
-  }
+    .nav-links {
+        display: none; /* Ocultar el menú por defecto en móviles */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 20px;
+    }
 
-  .nav-links.active {
-      display: flex; 
-  }
+    .nav-links.active {
+        display: flex; 
+    }
 
-  .icons {
-      display: none; /* Esconder los íconos en el menú móvil */
-  }
+    .icons.active {
+      display: flex;
+    }
 
-  .icons.active {
-      display: flex; /* Mostrar íconos cuando el menú está activo */
-  }
+    .icons {
+        display: none; /* Esconder los íconos en el menú móvil */
+    }
+
+    .icons.active {
+        display: flex; /* Mostrar íconos cuando el menú está activo */
+    }
 }
 
 /* Estilos para las barras del menú hamburguesa convertida en "X" */
 #hamburger .fa-bars.active {
-  display: none; /* Oculta el ícono de hamburguesa cuando está abierto */
+    display: none; /* Oculta el ícono de hamburguesa cuando está abierto */
 }
 
 #hamburger .fa-times.active {
-  display: block; /* Muestra el ícono de "X" cuando está abierto */
+    display: block; /* Muestra el ícono de "X" cuando está abierto */
 }
 
 #hamburger .fa-times {
-  display: none; /* Oculta el ícono de "X" de manera predeterminada */
+    display: none; /* Oculta el ícono de "X" de manera predeterminada */
 }
 
 /* Barra superior */
 .top-bar {
-  background-color: #444;
-  text-align: center;
-  padding: 10px 0;
+    background-color: #444;
+    text-align: center;
+    padding: 10px 0;
 }
 
 .top-bar a {
-  color: #fff;
-  text-decoration: underline;
+    color: #fff;
+    text-decoration: underline;
 }
 
 .search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 }
 
 .search input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  outline: none;
-  width: 200px;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    outline: none;
+    width: 200px;
 }
 
 .search button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 12px;
+    cursor: pointer;
 }
 
 
