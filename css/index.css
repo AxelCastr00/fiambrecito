@@ -12,13 +12,11 @@ body {
   background-color: #f2f2f2;
 }
 
-//* General styles for the header */
+/* General styles for the header */
 header {
   background-color: #333;
   color: white;
-  position: relative;
 }
-
 header img {
   width: 10rem;
 }
@@ -28,7 +26,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  position: relative;
 }
 
 .menu-toggle {
@@ -37,7 +34,7 @@ nav {
 
 .icons {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
   gap: 20px;
 }
 
@@ -46,6 +43,7 @@ nav {
   font-size: 20px;
 }
 
+/* Estilo para las barras del menú hamburguesa */
 #hamburger {
   background: none;
   border: none;
@@ -60,7 +58,6 @@ nav {
 .nav-links {
   display: flex;
   gap: 20px;
-  z-index: 1000; /* Asegúrate de que el menú esté por encima de otros elementos */
 }
 
 .nav-links li {
@@ -72,96 +69,46 @@ nav {
   text-decoration: none;
 }
 
-/* Estilo para la barra de búsqueda */
-.search {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  flex-grow: 1; /* Asegura que la barra de búsqueda tome espacio disponible */
-  max-width: 300px;
-}
-
-.search input {
-  padding: 8px 12px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  outline: none;
-  width: 100%; /* Barra de búsqueda ocupará todo el ancho disponible */
-}
-
-.search input:focus {
-  border-color: #007BFF;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-}
-
-.search button {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
 /* Responsive styles */
 @media (max-width: 768px) {
   .menu-toggle {
-    display: block; /* Mostrar el menú hamburguesa en pantallas pequeñas */
-    position: absolute;
-    top: 20px;
-    right: 20px;
+      display: block;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background-color: #333;
-    width: 100%;
-    padding: 20px;
+      display: none; /* Ocultar el menú por defecto en móviles */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      padding: 20px;
   }
 
   .nav-links.active {
-    display: flex; /* Mostrar el menú desplegable */
+      display: flex; 
   }
 
   .icons {
-    position: absolute;
-    top: 10px;
-    right: 60px; /* Ajusta la posición para que no se superponga con el menú */
+      display: none; /* Esconder los íconos en el menú móvil */
   }
 
-  /* Barra de búsqueda en pantallas pequeñas */
-  .search {
-    width: 100%;
-    max-width: none;
-    margin-top: 10px;
-  }
-
-  .search input {
-    width: 90%; /* Ajustar ancho de input */
-  }
-
-  /* Alinear correctamente los íconos en dispositivos móviles */
-  .icons {
-    top: 20px;
-    right: 20px;
+  .icons.active {
+      display: flex; /* Mostrar íconos cuando el menú está activo */
   }
 }
 
 /* Estilos para las barras del menú hamburguesa convertida en "X" */
-.menu-toggle.open .fa-bars {
+#hamburger .fa-bars.active {
   display: none; /* Oculta el ícono de hamburguesa cuando está abierto */
 }
 
-.menu-toggle.open .fa-times {
+#hamburger .fa-times.active {
   display: block; /* Muestra el ícono de "X" cuando está abierto */
 }
 
-.menu-toggle .fa-times {
+#hamburger .fa-times {
   display: none; /* Oculta el ícono de "X" de manera predeterminada */
 }
 
@@ -176,6 +123,32 @@ nav {
   color: #fff;
   text-decoration: underline;
 }
+
+.search {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.search input {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  outline: none;
+  width: 200px;
+}
+
+.search button {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+
 
 
 /* Sección de beneficios */
